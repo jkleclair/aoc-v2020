@@ -2,6 +2,7 @@ module Day1
     ( day1
     ) where
 
+import Paths_aoc_v2020
 import Text.Read (readMaybe)
 import Data.Set (Set)
 import qualified Data.Set as Set
@@ -29,7 +30,8 @@ threeSum [] _ = Nothing
 
 day1 :: IO()
 day1 = do
-    numbersFile <- readFile "./input.txt"
+    filePath <- getDataFileName "data/day1.txt"
+    numbersFile <- readFile filePath
     let numbersFileSplit = lines numbersFile
     let numbers = map readMaybe numbersFileSplit
     putStrLn ("Day 1")
