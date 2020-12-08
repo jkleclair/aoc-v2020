@@ -37,6 +37,6 @@ day1 = do
     putStrLn ("Day 1")
     putStrLn ("Part 1:")
     print (twoSum numbers Set.empty target)
-    putStrLn ("Day 1")
     putStrLn ("Part 2:")
     print (threeSum numbers target)
+    putStrLn ("")
