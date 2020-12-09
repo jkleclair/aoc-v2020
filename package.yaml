@@ -25,6 +25,7 @@ dependencies:
 - split
 - lens
 - regex-posix
+- sort
 
 library:
   source-dirs: src

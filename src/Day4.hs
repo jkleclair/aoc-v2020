@@ -59,3 +59,4 @@ day4 = do
     print (length (filter (==True) requiredFieldsPassports))
     putStrLn ("Part 2: ")
     print (length (filter (==True) requiredAndValidFieldsPassports))
+    putStrLn ("")
