@@ -34,9 +34,9 @@ day1 = do
     numbersFile <- readFile filePath
     let numbersFileSplit = lines numbersFile
     let numbers = map readMaybe numbersFileSplit
-    putStrLn ("Day 1")
-    putStrLn ("Part 1:")
+    putStrLn "Day 1"
+    putStr "Part 1: "
     print (twoSum numbers Set.empty target)
-    putStrLn ("Part 2:")
+    putStr "Part 2: "
     print (threeSum numbers target)
-    putStrLn ("")
+    putStrLn ""

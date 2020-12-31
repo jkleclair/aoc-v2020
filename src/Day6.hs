@@ -23,6 +23,7 @@ getUniqueAnswersPerGroup acc [] = Set.size acc
 answersToSets :: [String] -> [Set Char]
 answersToSets = map Set.fromList
 
+-- This is based on how Set.unions is implemented
 intersections :: (Foldable f, Ord a) => f (Set a) -> Set a
 intersections xs = Foldable.foldl' Set.intersection (Set.unions xs) xs
 
@@ -33,11 +34,12 @@ day6 = do
     let groups = splitGroups answersFile
     let uniqueAnswers = map (getUniqueAnswersPerGroup Set.empty) groups
     putStrLn "Day 6"
-    putStrLn "Part 1: "
+    putStr "Part 1: "
     print (sum uniqueAnswers)
     let people = map splitPeople groups
     let answerSets = map answersToSets people
     let allAnswered = map intersections answerSets
     let numAllAnswered = map Set.size allAnswered
-    putStrLn "Part 2: "
+    putStr "Part 2: "
     print (sum numAllAnswered)
+    putStrLn ""

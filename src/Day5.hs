@@ -44,9 +44,9 @@ day5 = do
     let seats = lines seatsFile
     let parsedSeats = map parseSeat seats
     let seatIds = map seatId parsedSeats
-    putStrLn ("Day 5")
-    putStrLn ("Part 1: ")
+    putStrLn "Day 5"
+    putStr "Part 1: "
     print (maximum seatIds)
-    putStrLn ("Part 2: ")
+    putStr "Part 2: "
     print (findSeat (sort seatIds))
-    putStrLn ("")
+    putStrLn ""

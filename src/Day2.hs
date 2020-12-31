@@ -78,10 +78,10 @@ day2 = do
     let numValid = length (filter (== True) validPasswords)
     let validPasswords' = map passwordIsValid' parsedPasswords
     let numValid' = length (filter (== True) validPasswords')
-    putStrLn ("Day 2")
-    putStrLn ("Part 1: ")
+    putStrLn "Day 2"
+    putStr "Part 1: "
     print(numValid)
-    putStrLn ("Part 2: ")
+    putStr "Part 2: "
     print(numValid')
-    putStrLn ("")
+    putStrLn ""
 

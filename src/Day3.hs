@@ -35,10 +35,10 @@ day3 = do
     let trees = findTrees 0 0 infiniteSlopes testSlope
     -- TODO: Calculate all slopes in one run instead of indidually 
     let trees' = map (findTrees 0 0 infiniteSlopes) testSlopes
-    putStrLn ("Day 3")
-    putStrLn ("Part 1: ")
+    putStrLn "Day 3"
+    putStr "Part 1: "
     print (trees)
-    putStrLn ("Part 2: ")
+    putStr "Part 2: "
     print (product trees')
-    putStrLn ("")
+    putStrLn ""
     

@@ -54,9 +54,9 @@ day4 = do
     let requiredFieldsPassports = map (hasRequiredFields requiredFields) parsedPassports
     let validFieldsPassports = map areFieldsValid parsedPassports
     let requiredAndValidFieldsPassports = zipWith (&&) requiredFieldsPassports validFieldsPassports
-    putStrLn ("Day 4")
-    putStrLn ("Part 1: ")
+    putStrLn "Day 4"
+    putStr "Part 1: "
     print (length (filter (==True) requiredFieldsPassports))
-    putStrLn ("Part 2: ")
+    putStr "Part 2: "
     print (length (filter (==True) requiredAndValidFieldsPassports))
-    putStrLn ("")
+    putStrLn ""
